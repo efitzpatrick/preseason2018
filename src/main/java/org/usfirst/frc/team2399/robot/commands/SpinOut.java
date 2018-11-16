@@ -7,11 +7,14 @@ import edu.wpi.first.wpilibj.command.Command;
 public class SpinOut extends Command {
 
 	Intake in;
-	
+
+	public SpinOut(Intake in){
+		this.in = in;
+		requires(in);
+	}
+
 	@Override
 	protected void initialize() {
-		// TODO Auto-generated method stub
-		super.initialize();
 	}
 
 	@Override

@@ -17,11 +17,11 @@ public class Shooter extends Subsystem {
 	}
 	
 	public void arm() {
-		
+		stopper.set(DoubleSolenoid.Value.kForward);
 	}
 	
-	public void disArm() {
-		
+	public void disarm() {
+		stopper.set(DoubleSolenoid.Value.kReverse);
 	}
 
 	@Override

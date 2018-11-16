@@ -4,23 +4,23 @@ import org.usfirst.frc.team2399.robot.subsystems.Intake;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class SpinIn extends Command {
+public class Arm extends Command {
 
-	Intake in;
+	Shooter shooter;
 
-	public SpinIn(Intake in){
-		this.in = in;
-		requires(in);
+	public Arm(Shooter shooter){
+		this.shooter = shooter;
+		requires(shooter);
 	}
-	
+
 	@Override
 	protected void initialize() {
 	}
 
 	@Override
 	protected void execute() {
-		in.setSpeed(1);
-	}
+		shooter.arm()
+	};
 
 	@Override
 	protected void end() {
